@@ -4,7 +4,7 @@ const PersonsList = (props) => {
     const persons =
         props.showAll ?
             props.persons :
-            props.persons.filter(person => person.name === props.search);
+            props.persons.filter(person => person.name.toUpperCase().includes(props.search.toUpperCase()));
 
     return (
         <table>
