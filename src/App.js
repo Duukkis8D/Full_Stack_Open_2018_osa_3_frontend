@@ -4,9 +4,7 @@ import Filter from './components/Filter';
 import AddPerson from './components/AddPerson';
 import Notification from './components/Notification';
 import personsService from './services/persons';
-import './css/App.css'
-import './css/PersonsList.css';
-import './css/Notification.css';
+import './css/App.css';
 
 class App extends React.Component {
     constructor(props) {
@@ -99,24 +97,22 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
-                <h2>Puhelinluettelo</h2>
+            <div id="appContainer">
+                <h1>Puhelinluettelo</h1>
                 <Notification message={this.state.message}/>
-                <Filter search={this.state.search} handleSearch={this.handleSearch}/>
                 <form onSubmit={this.addPerson}>
                     <AddPerson newName={this.state.newName}
                                newPhoneNumber={this.state.newPhoneNumber}
                                handleNameChange={this.handleNameChange}
                                handlePhoneNumberChange={this.handlePhoneNumberChange}/>
-                    <div>
-                        <button type="submit">lisää</button>
-                    </div>
                 </form>
                 <h2>Numerot</h2>
+                <Filter search={this.state.search} handleSearch={this.handleSearch}/>
                 <PersonsList persons={this.state.persons}
                              showAll={this.state.showAll}
                              search={this.state.search}
                              removePerson={this.removePerson}/>
+                <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a> is licensed by CC BY 3.0</div>
             </div>
         )
     }

@@ -4,7 +4,7 @@ const Notification = (props) => {
     if (props.message === '') return <div></div>;
 
     return (
-        <div className="notification">{props.message}</div>
+        <div id="notification">{props.message}</div>
     );
 };
 

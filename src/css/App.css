@@ -1,3 +1,36 @@
+@font-face {
+    font-family: "Nimbus Mono L";
+    src: url('../fonts/Nimbus Mono L W03 Regular.woff2') format('woff2'), 
+         url('../fonts/Nimbus Mono L W03 Regular.woff') format('woff');
+    font-family: "Nimbus Sans L";
+    src: url('../fonts/Nimbus Sans L.woff2') format('woff2'), 
+         url('../fonts/Nimbus Sans L.woff') format('woff');
+}
+
+h1,
+h2 {
+    font-family: "Nimbus Mono L", monospace;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+p,
+label,
+input,
+button,
+table {
+    font-family: "Nimbus Sans L", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+}
+
 input {
     display: block;
     padding: 2px;
@@ -7,4 +40,31 @@ input {
 button {
     padding: 5px;
     margin: 5px 0 15px 0;
+}
+
+#addPersonContainer,
+#filterContainer {
+    border-left: 5px solid orange;
+    padding: 12px;
+}
+
+#notification {
+    font-family: "Nimbus Sans L", sans-serif;
+    font-weight: normal;
+    color: blue;
+    background: lightgrey;
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+table td {
+    padding: 3px 10px 3px 0;
 }

@@ -2,9 +2,9 @@ import React from 'react';
 
 const Filter = (props) => {
     return (
-        <div>
-            rajaa näytettäviä: <input value={props.search} onChange={props.handleSearch}/>
-            <br></br>
+        <div id="filterContainer">
+            <label>Rajaa näytettäviä</label>
+            <input value={props.search} onChange={props.handleSearch}/>
         </div>
     );
 };
