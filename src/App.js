@@ -100,19 +100,21 @@ class App extends React.Component {
             <div id="appContainer">
                 <h1>Puhelinluettelo</h1>
                 <Notification message={this.state.message}/>
-                <form onSubmit={this.addPerson}>
+                <h2 id="addPersonHeadline">Lisää uusi henkilö</h2>
+                <form id="addPersonForm" onSubmit={this.addPerson}>
                     <AddPerson newName={this.state.newName}
                                newPhoneNumber={this.state.newPhoneNumber}
                                handleNameChange={this.handleNameChange}
                                handlePhoneNumberChange={this.handlePhoneNumberChange}/>
                 </form>
-                <h2>Numerot</h2>
+                <h2 id="filterHeadline">Rajaa näytettäviä</h2>
                 <Filter search={this.state.search} handleSearch={this.handleSearch}/>
+                <h2 id="personsListHeadline">Henkilöt</h2>
                 <PersonsList persons={this.state.persons}
                              showAll={this.state.showAll}
                              search={this.state.search}
                              removePerson={this.removePerson}/>
-                <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a> is licensed by CC BY 3.0</div>
+                <div id="fontInfo">Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a> is licensed by CC BY 3.0</div>
             </div>
         )
     }

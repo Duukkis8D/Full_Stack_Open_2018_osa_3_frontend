@@ -9,7 +9,7 @@ const PersonsList = (props) => {
     return (
         <div id="personsListContainer">
             <table>
-                <thead><tr><th></th></tr></thead>
+                <thead></thead>
                 <tbody>
                     { persons.map(person => <tr key={person.name}>
                                                 <td key={person.name}>{person.name}</td>
