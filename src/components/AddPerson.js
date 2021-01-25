@@ -3,11 +3,11 @@ import React from 'react';
 const AddPerson = (props) => {
     return (
         <div id="addPersonContainer">
-            <label>Nimi</label>
+            <label>Name</label>
             <input value={props.newName} onChange={props.handleNameChange}/>
-            <label>Numero</label>
+            <label>Number</label>
             <input value={props.newPhoneNumber} onChange={props.handlePhoneNumberChange}/>
-            <button type="submit">Lisää tiedot</button>
+            <button type="submit">Add person</button>
         </div>
     );
 };

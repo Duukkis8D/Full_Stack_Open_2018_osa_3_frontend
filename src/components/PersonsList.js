@@ -16,7 +16,7 @@ const PersonsList = (props) => {
                                                 <td key={person.phone}>{person.phone}</td>
                                                 <td>
                                                     <button onClick={props.removePerson(person.id, person.name)}>
-                                                        Poista
+                                                        Remove
                                                     </button>
                                                 </td>
                                             </tr>) }

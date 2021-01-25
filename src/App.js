@@ -41,7 +41,7 @@ class App extends React.Component {
 
         if (foundDuplicate === false) {
             this.addPersonToServer(event);
-            this.setState({ message: `Lisättiin ${event.target[0].value}` });
+            this.setState({ message: `${event.target[0].value} has been added to list` });
             setTimeout(() => {
                 this.setState({ message: '' });
             }, 5000);
@@ -66,11 +66,11 @@ class App extends React.Component {
 
     removePerson = (personID, personName) => {
         return () => {
-            if (window.confirm(`Poistetaanko ${personName} ?`)) {
+            if (window.confirm(`Do you want to remove ${personName} ?`)) {
                 personsService.remove(personID);
                 this.setState({
                     persons: this.state.persons.filter(person => person.id !== personID),
-                    message: `Poistettiin ${personName}`
+                    message: `${personName} has been removed`
                 });
                 setTimeout(() => {
                     this.setState({ message: '' });
@@ -98,18 +98,18 @@ class App extends React.Component {
     render() {
         return (
             <div id="appContainer">
-                <h1>Puhelinluettelo</h1>
+                <h1>Phonebook</h1>
                 <Notification message={this.state.message}/>
-                <h2 id="addPersonHeadline">Lisää uusi henkilö</h2>
+                <h2 id="addPersonHeadline">Add new person</h2>
                 <form id="addPersonForm" onSubmit={this.addPerson}>
                     <AddPerson newName={this.state.newName}
                                newPhoneNumber={this.state.newPhoneNumber}
                                handleNameChange={this.handleNameChange}
                                handlePhoneNumberChange={this.handlePhoneNumberChange}/>
                 </form>
-                <h2 id="filterHeadline">Rajaa näytettäviä</h2>
+                <h2 id="filterHeadline">Filter list</h2>
                 <Filter search={this.state.search} handleSearch={this.handleSearch}/>
-                <h2 id="personsListHeadline">Henkilöt</h2>
+                <h2 id="personsListHeadline">Persons</h2>
                 <PersonsList persons={this.state.persons}
                              showAll={this.state.showAll}
                              search={this.state.search}
