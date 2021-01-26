@@ -9,6 +9,10 @@
 
 /* Small (mobile) screens */
 
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
 * {
     box-sizing: border-box;
 }
@@ -66,8 +70,8 @@ button {
 }
 
 input {
-    display: block;
     width: 210px;
+    height: 30px;
 }
 
 button {
@@ -119,7 +123,7 @@ table tr {
 }
 
 #fontInfo {
-    margin: 30px 0 20px 0;
+    margin: 30px 5px 20px 5px;
     font-size: 14px;
 }
 

@@ -3,8 +3,8 @@ import React from 'react';
 const Filter = (props) => {
     return (
         <div id="filterContainer">
-            <label>Write search term</label>
-            <input value={props.search} onChange={props.handleSearch}/>
+            <label htmlFor="searchField">Write search term</label><br></br>
+            <input id="searchField" value={props.search} onChange={props.handleSearch}/>
         </div>
     );
 };
