@@ -15,7 +15,8 @@ const PersonsList = (props) => {
                                                 <td key={person.name}>{person.name}</td>
                                                 <td key={person.phone}>{person.phone}</td>
                                                 <td>
-                                                    <button onClick={props.removePerson(person.id, person.name)}>
+                                                    <button className="removeButton"
+                                                            onClick={props.removePerson(person.id, person.name)}>
                                                         Remove
                                                     </button>
                                                 </td>

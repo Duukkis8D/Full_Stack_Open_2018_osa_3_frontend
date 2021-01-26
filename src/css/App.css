@@ -7,10 +7,29 @@
          url('../fonts/Nimbus Sans L.woff') format('woff');
 }
 
+/* Small (mobile) screens */
+
+* {
+    box-sizing: border-box;
+}
+
 #appContainer {
     max-width: 780px;
     margin: 0 auto;
     display: grid;
+}
+
+#appContainer:first-child {
+    margin-top: 10px;
+}
+
+#appContainer:last-child {
+    margin-bottom: 10px;
+}
+
+#appContainer > * {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 h1,
@@ -37,19 +56,29 @@ table {
     font-size: 16px;
 }
 
-input {
-    display: block;
-    padding: 2px;
-    margin: 5px 0 15px 0;
-}
-
+input,
 button {
     padding: 5px;
     margin: 5px 0 15px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+input {
+    display: block;
+    width: 210px;
+}
+
+button {
     font-size: 14px;
 }
 
-#addPersonContainer,
+.removeButton {
+    margin: 5px 0;
+}
+
+#addPersonForm,
 #filterContainer {
     border-left: 5px solid #FFE7B0;
     padding: 12px;
@@ -59,46 +88,70 @@ button {
 table {
     font-size: 14px;
     border-spacing: 0;
+    border-collapse: collapse;
     white-space: nowrap;
 }
 
 #notification {
     font-family: "Nimbus Sans L", sans-serif;
     font-weight: normal;
-    color: blue;
-    background: lightgrey;
     font-size: 20px;
-    border-style: solid;
+    border: 3px solid orange;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-}
-
-ul {
-    padding: 0;
-    list-style-type: none;
 }
 
 table td {
     padding: 3px 10px;
 }
 
-table td:last-child {
-    width: 100%;
+table td:first-child {
+    padding-left: 0;
 }
 
-table tr:nth-child(even) {
-    background-color: #FFE7B0;
+table tr:first-child {
+    border-top: 2px solid #FFE7B0;
 }
 
-table tr:nth-child(odd) {
-    background-color: rgb(254, 245, 216);
+table tr {
+    border-bottom: 2px solid #FFE7B0;
 }
 
 #fontInfo {
-    margin-top: 20px;
+    margin: 30px 0 20px 0;
     font-size: 14px;
 }
+
+/* Medium (mobile) screens */
+
+@media only screen and (min-width: 410px) {
+    #appContainer > * {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    table tr:nth-child(even) {
+        border: initial;
+        background-color: #FFE7B0;
+    }
+
+    table tr:nth-child(odd) {
+        border: initial;
+        background-color: rgb(254, 245, 216);
+    }
+
+    table td:first-child {
+        padding-left: 10px;
+    }
+
+    table td:last-child {
+        background-color: white;
+        padding-left: 15px;
+    }
+}
+
+/* Large screens */
 
 @media only screen and (min-width: 730px) {
     #appContainer {
