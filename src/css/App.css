@@ -1,10 +1,13 @@
 @font-face {
     font-family: "Nimbus Mono L";
-    src: url('../fonts/Nimbus Mono L W03 Regular.woff2') format('woff2'), 
-         url('../fonts/Nimbus Mono L W03 Regular.woff') format('woff');
+    src: url("../fonts/Nimbus_Mono_L_W03_Regular.woff2") format("woff2"), 
+         url("../fonts/Nimbus_Mono_L_W03_Regular.woff") format("woff");
+}
+
+@font-face {
     font-family: "Nimbus Sans L";
-    src: url('../fonts/Nimbus Sans L.woff2') format('woff2'), 
-         url('../fonts/Nimbus Sans L.woff') format('woff');
+    src: url("../fonts/Nimbus_Sans_L_Regular.woff2") format("woff2"), 
+         url("../fonts/Nimbus_Sans_L_Regular.woff") format("woff");
 }
 
 /* Small (mobile) screens */
@@ -54,7 +57,9 @@ p,
 label,
 input,
 button,
-table {
+table,
+#notification,
+#fontInfo {
     font-family: "Nimbus Sans L", sans-serif;
     font-weight: normal;
     font-size: 16px;
@@ -62,7 +67,7 @@ table {
 
 input,
 button {
-    padding: 5px;
+    padding: 7px 5px 3px 5px; /* Trying to fix Nimbus Sans L skewed baseline by putting more padding on top */
     margin: 5px 0 15px 0;
     border: 1px solid black;
     border-radius: 5px;
@@ -97,8 +102,6 @@ table {
 }
 
 #notification {
-    font-family: "Nimbus Sans L", sans-serif;
-    font-weight: normal;
     font-size: 20px;
     border: 3px solid orange;
     border-radius: 5px;
@@ -107,7 +110,7 @@ table {
 }
 
 table td {
-    padding: 3px 10px;
+    padding: 5px 10px 1px 10px; /* Trying to fix Nimbus Sans L skewed baseline by putting more padding on top */
 }
 
 table td:first-child {
